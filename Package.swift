@@ -4,25 +4,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "Bugsplat-iOS-SP",
+    name: "BugSplat-iOS",
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "Bugsplat-iOS-SP",
-            targets: ["Bugsplat-iOS-SP"]),
-    ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
+            name: "Bugsplat",
+            targets: ["Bugsplat"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "Bugsplat-iOS-SP",
-            dependencies: []),
-        .testTarget(
-            name: "Bugsplat-iOS-SPTests",
-            dependencies: ["Bugsplat-iOS-SP"]),
+        .binaryTarget(
+            name: "Bugsplat",
+            url: "https://github.com/BugSplat-Git/BugSplat-iOS/releases/download/1.0/Bugsplat.xcframework.zip",
+            checksum: "7ee6bbe285b0594d198df9827a6219c19cbb8bd991baf2a317b4cf4b05919925"),
     ]
 )
+
